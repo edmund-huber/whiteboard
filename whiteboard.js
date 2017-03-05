@@ -17,6 +17,6 @@
         // And also clear the screen.
         clear();
     };
-    window.addEventListener("resize", sizeCanvasToParent);
+    window.addEventListener('resize', sizeCanvasToParent);
     sizeCanvasToParent();
 })();
