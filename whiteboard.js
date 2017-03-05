@@ -19,4 +19,24 @@
     };
     window.addEventListener('resize', sizeCanvasToParent);
     sizeCanvasToParent();
+
+    var mouse1Pressed = false;
+    canvas.addEventListener('mousemove', function(e) {
+        if (mouse1Pressed) {
+            ctx.fillStyle = 'rgb(255, 0, 0)';
+            ctx.fillRect(e.x, e.y, 10, 10)
+        }
+    });
+
+    canvas.addEventListener('mousedown', function(e) {
+        if (e.button == 0) {
+            mouse1Pressed = true;
+        }
+    });
+
+    canvas.addEventListener('mouseup', function(e) {
+        if (e.button == 0) {
+            mouse1Pressed = false;
+        }
+    });
 })();
